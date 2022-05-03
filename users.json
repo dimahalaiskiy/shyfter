@@ -1,0 +1,67 @@
+{
+  "users": [
+    {
+      "recordId": "1",
+      "displayName": "Julie Geerts",
+      "initials": "JG"
+    },
+    {
+      "recordId": "2",
+      "displayName": "Simon Laurent",
+      "initials": "SL"
+    },
+    {
+      "recordId": "3",
+      "displayName": "Ruslan Bezbozhko",
+      "initials": "RB"
+    },
+    {
+      "recordId": "4",
+      "displayName": "Andiy Pervozvanui",
+      "initials": "AP"
+    },
+    {
+      "recordId": "5",
+      "displayName": "Oksana Plahotnuk",
+      "initials": "OP"
+    }
+  ],
+  "shifts": [
+    {
+      "id": "1",
+      "recordId": "1",
+      "start": "2022-04-18T09:00:00.000Z",
+      "end": "2022-04-18T17:00:00.000Z"
+    },
+    {
+      "id": "4",
+      "recordId": "1",
+      "start": "2022-04-19T09:00:00.000Z",
+      "end": "2022-04-19T17:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "recordId": "2",
+      "start": "2022-04-18T08:00:00.000Z",
+      "end": "2022-04-18T18:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "recordId": "3",
+      "start": "2022-04-13T08:00:00.000Z",
+      "end": "2022-04-13T18:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "recordId": "4",
+      "start": "2022-04-15T08:00:00.000Z",
+      "end": "2022-04-15T18:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "recordId": "5",
+      "start": "2022-04-20T08:00:00.000Z",
+      "end": "2022-04-20T18:00:00.000Z"
+    }
+  ]
+}
