@@ -1,14 +1,38 @@
 import React from 'react';
-import { UserItemSection, UserInfo, Initials } from './Components.styled';
+import { Initials, UserInfo } from './Components.styled';
+import DaySquare from './DaySquare';
 
-const UserItem = () => {
+interface Props {
+  user: Users;
+  week: Date[];
+}
+
+interface Shifts {
+  id: number;
+  recordId: number;
+  start: string;
+  end: string;
+}
+
+interface Users {
+  recordId: number;
+  displayName: string;
+  initials: string;
+  shifts?: Shifts[];
+}
+
+const UserItem: React.FC<Props> = ({ user, week }) => {
   return (
-    <UserItemSection>
+    <>
       <UserInfo>
-        <Initials />
-        <p>name</p>
+        <Initials>{user.initials}</Initials>
+        <p>{user.displayName}</p>
       </UserInfo>
-    </UserItemSection>
+      {week &&
+        week.map((day) => {
+          return <DaySquare key={Math.random() * 2.5} day={day}></DaySquare>;
+        })}
+    </>
   );
 };
 

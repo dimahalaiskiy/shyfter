@@ -1,3 +1,3 @@
-npm start - для запуску проекта
+/npm start - для запуску проекта
 <br>
-json-server users.json - для запуску сервера
+/json-server users.json - для запуску сервера

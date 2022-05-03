@@ -33,6 +33,7 @@ export const RechercherConrainer = styled.section`
   display: grid;
   grid-template-columns: 3fr repeat(7, 1fr);
   grid-auto-rows: 50px;
+  padding: 30px 30px 0 30px;
 `;
 
 export const QuerySection = styled.div`
@@ -71,14 +72,21 @@ export const DayContainer = styled.div`
   font-weight: 600;
 `;
 
-export const UserItemSection = styled.div`
+export const UserListSection = styled.div`
   display: grid;
   grid-template-columns: 3fr repeat(7, 1fr);
+  grid-auto-rows: 50px;
+  padding: 0px 30px;
 `;
 
 export const UserInfo = styled.div`
+  width: 242px;
+  font-size: 18px;
   display: flex;
   justify-content: left;
+  align-items: center;
+  border: 1px solid #f4f4fb;
+  background-color: #f8faff;
 `;
 
 export const Initials = styled.span`
@@ -86,4 +94,15 @@ export const Initials = styled.span`
   border-radius: 50%;
   background-color: black;
   color: white;
+  margin-right: 10px;
+  margin-left: 5px;
+`;
+
+export const DaySection = styled.div`
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #f4f4fb;
+  background-color: #f8faff;
 `;

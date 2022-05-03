@@ -1,35 +1,35 @@
 import React from 'react';
-import {
-  RechercherConrainer,
-  QuerySection,
-  Input,
-  InnerLayout,
-} from './Components.styled';
+import { RechercherConrainer, QuerySection, Input } from './Components.styled';
 import { weekDays } from '../helpers/date';
 import DaySection from './DaySection';
 
 interface Props {
   week: Date[];
+  queryHandler: (e: React.FormEvent<HTMLInputElement>) => void;
+  query: string;
 }
 
-const Rechercher: React.FC<Props> = ({ week }) => {
+const Rechercher: React.FC<Props> = ({ week, queryHandler, query }) => {
   return (
-    <InnerLayout>
-      <RechercherConrainer>
-        <QuerySection>
-          <Input type='text' placeholder='Rechercher...' value='' />
-        </QuerySection>
-        {weekDays(week).map((week) => {
-          return (
-            <DaySection
-              key={week.dayNumber}
-              day={week.day}
-              dayNumber={week.dayNumber}
-            />
-          );
-        })}
-      </RechercherConrainer>
-    </InnerLayout>
+    <RechercherConrainer>
+      <QuerySection>
+        <Input
+          type='text'
+          placeholder='Rechercher...'
+          value={query}
+          onChange={queryHandler}
+        />
+      </QuerySection>
+      {weekDays(week).map((week) => {
+        return (
+          <DaySection
+            key={week.dayNumber}
+            day={week.day}
+            dayNumber={week.dayNumber}
+          />
+        );
+      })}
+    </RechercherConrainer>
   );
 };
 

@@ -1,6 +1,11 @@
 import React from 'react';
 import { getDay, getMonth } from '../helpers/date';
-import { ArrowButton, HeaderContainer, DateSection } from './Components.styled';
+import {
+  ArrowButton,
+  HeaderContainer,
+  DateSection,
+  InnerLayout,
+} from './Components.styled';
 
 interface Props {
   week: Date[];
@@ -10,18 +15,20 @@ interface Props {
 
 const Header: React.FC<Props> = ({ week, incrementDate, decrementDate }) => {
   return (
-    <HeaderContainer>
-      <ArrowButton onClick={decrementDate} type='button'>
-        &#8592;
-      </ArrowButton>
-      <DateSection>
-        {getDay(week[0])} {getMonth(week[0])}. - {getDay(week[6])} {''}
-        {getMonth(week[6])}.
-      </DateSection>
-      <ArrowButton onClick={incrementDate} type='button'>
-        &#8594;
-      </ArrowButton>
-    </HeaderContainer>
+    <InnerLayout>
+      <HeaderContainer>
+        <ArrowButton onClick={decrementDate} type='button'>
+          &#8592;
+        </ArrowButton>
+        <DateSection>
+          {getDay(week[0])} {getMonth(week[0])}. - {getDay(week[6])} {''}
+          {getMonth(week[6])}.
+        </DateSection>
+        <ArrowButton onClick={incrementDate} type='button'>
+          &#8594;
+        </ArrowButton>
+      </HeaderContainer>
+    </InnerLayout>
   );
 };
 
