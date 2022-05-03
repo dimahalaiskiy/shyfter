@@ -30,7 +30,12 @@ const UserItem: React.FC<Props> = ({ user, week }) => {
       </UserInfo>
       {week &&
         week.map((day) => {
-          return <DaySquare key={Math.random() * 2.5} day={day}></DaySquare>;
+          return (
+            <DaySquare
+              key={Math.random() * 2.5}
+              day={day}
+              userShifts={user.shifts}></DaySquare>
+          );
         })}
     </>
   );

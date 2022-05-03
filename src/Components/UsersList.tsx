@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { UserListSection } from './Components.styled';
 import UserItem from './UserItem';
 
