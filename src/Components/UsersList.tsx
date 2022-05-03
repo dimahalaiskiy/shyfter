@@ -1,35 +1,13 @@
 import React from 'react';
-import { UserListSection } from './Components.styled';
+import { UserListSection } from '../styles/Components.styled';
 import UserItem from './UserItem';
+import { UsersListProps } from '../types/interfaces';
 
-interface Shifts {
-  id: number;
-  recordId: number;
-  start: string;
-  end: string;
-}
-
-interface Users {
-  recordId: number;
-  displayName: string;
-  initials: string;
-  shifts?: Shifts[];
-}
-interface Props {
-  users?: Users[];
-  week: Date[];
-  query: string;
-}
-
-const UsersList: React.FC<Props> = ({ users, week, query }) => {
-  const filteredUsers = users?.filter((user) =>
-    user.displayName.toLowerCase().includes(query.toLowerCase())
-  );
-
+const UsersList: React.FC<UsersListProps> = ({ users, week }) => {
   return (
     <UserListSection>
-      {filteredUsers &&
-        filteredUsers.map((user) => {
+      {users &&
+        users.map((user) => {
           return (
             <UserItem key={user.recordId} user={user} week={week}></UserItem>
           );

@@ -1,12 +1,8 @@
 import React from 'react';
-import { DayContainer } from './Components.styled';
+import { DayContainer } from '../styles/Components.styled';
+import { DaySectionProps } from '../types/interfaces';
 
-interface Props {
-  day: String;
-  dayNumber: Number | String;
-}
-
-const DaySection: React.FC<Props> = ({ day, dayNumber }) => {
+const DaySection: React.FC<DaySectionProps> = ({ day, dayNumber }) => {
   return (
     <DayContainer>
       {day} <p>{dayNumber.toString()}</p>

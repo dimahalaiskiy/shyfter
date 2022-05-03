@@ -1,15 +1,18 @@
 import React from 'react';
-import { RechercherConrainer, QuerySection, Input } from './Components.styled';
+import {
+  RechercherConrainer,
+  QuerySection,
+  Input,
+} from '../styles/Components.styled';
 import { weekDays } from '../helpers/date';
 import DaySection from './DaySection';
+import { RechercherProps } from '../types/interfaces';
 
-interface Props {
-  week: Date[];
-  queryHandler: (e: React.FormEvent<HTMLInputElement>) => void;
-  query: string;
-}
-
-const Rechercher: React.FC<Props> = ({ week, queryHandler, query }) => {
+const Rechercher: React.FC<RechercherProps> = ({
+  week,
+  queryHandler,
+  query,
+}) => {
   return (
     <RechercherConrainer>
       <QuerySection>

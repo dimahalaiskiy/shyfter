@@ -1,27 +1,10 @@
 import React from 'react';
-import { Initials, UserInfo } from './Components.styled';
+import { Initials, UserInfo } from '../styles/Components.styled';
 import DaySquare from './DaySquare';
+import { UserItemProps } from '../types/interfaces';
+import { v4 as uuidv4 } from 'uuid';
 
-interface Props {
-  user: Users;
-  week: Date[];
-}
-
-interface Shifts {
-  id: number;
-  recordId: number;
-  start: string;
-  end: string;
-}
-
-interface Users {
-  recordId: number;
-  displayName: string;
-  initials: string;
-  shifts?: Shifts[];
-}
-
-const UserItem: React.FC<Props> = ({ user, week }) => {
+const UserItem: React.FC<UserItemProps> = ({ user, week }) => {
   return (
     <>
       <UserInfo>
@@ -32,7 +15,7 @@ const UserItem: React.FC<Props> = ({ user, week }) => {
         week.map((day) => {
           return (
             <DaySquare
-              key={Math.random() * 2.5}
+              key={uuidv4()}
               day={day}
               userShifts={user.shifts}></DaySquare>
           );

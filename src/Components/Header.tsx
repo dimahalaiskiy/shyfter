@@ -5,15 +5,15 @@ import {
   HeaderContainer,
   DateSection,
   InnerLayout,
-} from './Components.styled';
+} from '../styles/Components.styled';
 
-interface Props {
-  week: Date[];
-  decrementDate: () => void;
-  incrementDate: () => void;
-}
+import { HeaderProps } from '../types/interfaces';
 
-const Header: React.FC<Props> = ({ week, incrementDate, decrementDate }) => {
+const Header: React.FC<HeaderProps> = ({
+  week,
+  incrementDate,
+  decrementDate,
+}) => {
   return (
     <InnerLayout>
       <HeaderContainer>
